@@ -35,6 +35,7 @@ export NOOP_HOME=$(abspath .)
 # export FST_HOME=~
 
 sim:
+	rm -rf build
 	mkdir -p build
 	# cp -r vsrc/* build
 	make EMU_TRACE=1 emu -j12 NOOP_HOME=$(NOOP_HOME) NEMU_HOME=.

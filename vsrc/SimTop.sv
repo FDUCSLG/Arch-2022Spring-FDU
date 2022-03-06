@@ -1,7 +1,6 @@
 `ifdef VERILATOR
 `include "include/common.sv"
 `include "pipeline/core.sv"
-`endif
 
 // `define USE_VTOP
 
@@ -44,3 +43,4 @@ RAMHelper1 ram(
 assign {io_uart_out_valid, io_uart_out_ch, io_uart_in_valid} = '0;
 
 endmodule
+`endif

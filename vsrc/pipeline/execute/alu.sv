@@ -9,7 +9,8 @@
 `endif
 
 module alu
-	import common::*; (
+	import common::*;
+	import pipes::*;(
 	input u64 a, b,
 	input alufunc_t alufunc,
 	output u64 c

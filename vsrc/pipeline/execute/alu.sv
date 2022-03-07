@@ -1,7 +1,7 @@
 `ifndef __ALU_SV
 `define __ALU_SV
 
-`ifndef VERILATOR
+`ifdef VERILATOR
 `include "include/common.sv"
 `include "include/pipes.sv"
 `else

@@ -1,4 +1,4 @@
-![Introduction](imgs\Introduction.PNG)
+![Introduction](https://github.com/FDUCSLG/ICS-2021Spring-FDU/blob/master/doc/src/asset/banner.svg)
 
 > 2022年春 计算机组成与体系结构荣誉课 实验课网站。
 

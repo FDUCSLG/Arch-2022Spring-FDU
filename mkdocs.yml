@@ -1,7 +1,12 @@
 site_name: Arch-2022Spring-FDU
 
 nav:
-  - 课程安排: index.md
+  - 课程大纲: index.md
+  - 实验须知: 实验须知.md
+  - lab1: 
+    - 实验环境介绍: lab1/实验环境介绍.md 
+  - 参考资料: 参考资料.md
+
 
 theme:
   name: material

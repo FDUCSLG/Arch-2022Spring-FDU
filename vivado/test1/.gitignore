@@ -1,5 +1,5 @@
 *
 !*/
-!*.xci
+!src/*.xci
 !.gitignore
 !*.xpr

@@ -1,4 +1,0 @@
-[submodule "difftest"]
-	path = difftest
-	url = https://github.com/FDUCSLG/difftest.git
-	branch = main

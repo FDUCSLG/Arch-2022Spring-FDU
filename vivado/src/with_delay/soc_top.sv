@@ -46,7 +46,7 @@ module soc_top #(
 	cbus_crossbar cbus_crossbar_inst(.*);
 
 	/* RAM */
-	bram_wrapper bram_wrapper_inst(
+	bram_wrapper #(SIMULATION) bram_wrapper_inst(
 		.clk(cpu_clk), .reset,
 		.valid(ram_valid),
 		.addr(ram_addr),

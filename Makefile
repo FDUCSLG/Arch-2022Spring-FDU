@@ -45,5 +45,11 @@ test-lab1a: sim
 
 test-lab1: sim
 	TEST=$(TEST) ./build/emu --diff ./riscv64-nemu-interpreter-so -i ./ready-to-run/lab1/lab1-test.bin $(VOPT) || true
-	
+
+test-lab2: sim
+	TEST=$(TEST) ./build/emu --diff ./riscv64-nemu-interpreter-so -i ./ready-to-run/lab2/all-test-rv64i.bin $(VOPT) || true
+
+test-lab3: sim
+	TEST=$(TEST) ./build/emu --diff ./riscv64-nemu-interpreter-so -i ./ready-to-run/lab3/all-test-rv64im.bin $(VOPT) || true
+		
 .PHONY: verilog emu clean sim

@@ -3,7 +3,7 @@ module simtop (
 );
 	logic clk;
 	initial clk = '0;
-	always #10 clk = ~clk;
+	always #5 clk = ~clk;
 
 	logic reset;
 	initial begin

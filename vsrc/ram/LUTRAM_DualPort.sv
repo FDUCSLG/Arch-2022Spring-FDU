@@ -94,8 +94,8 @@ module LUTRAM_DualPort #(
 		.READ_RESET_VALUE_B(0),
 		.RST_MODE_A("SYNC"),
 		.RST_MODE_B("SYNC"),
-		.SIM_ASSERT_CHK(1),
-		.USE_EMBEDDED_CONSTRAINT(0),
+		// .SIM_ASSERT_CHK(1),
+		// .USE_EMBEDDED_CONSTRAINT(0),
 		.USE_MEM_INIT(1),
 		.WRITE_DATA_WIDTH_A(DATA_WIDTH)
 	) xpm_memory_dpdistram_inst (

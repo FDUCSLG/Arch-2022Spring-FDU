@@ -71,7 +71,7 @@ module device #(
 				endcase
 			end
 			COUNTER_1, COUNTER_2: begin
-				rdata = cnter1;
+				rdata = cnter;
 			end
 			TX_READY: begin
 				rdata = '0;

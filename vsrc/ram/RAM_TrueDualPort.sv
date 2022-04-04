@@ -87,7 +87,7 @@ module RAM_TrueDualPort #(
 		.AUTO_SLEEP_TIME(0),
 		.BYTE_WRITE_WIDTH_A(BYTE_WIDTH),  // byte-write enable
 		.BYTE_WRITE_WIDTH_B(BYTE_WIDTH),
-		.CASCADE_HEIGHT(0),
+		// .CASCADE_HEIGHT(0),
 		.CLOCKING_MODE("common_clock"),
 		.ECC_MODE("no_ecc"),
 		.MEMORY_INIT_FILE("none"),
@@ -104,7 +104,7 @@ module RAM_TrueDualPort #(
 		.READ_RESET_VALUE_B(0),
 		.RST_MODE_A("SYNC"),
 		.RST_MODE_B("SYNC"),
-		.SIM_ASSERT_CHK(1),
+		// .SIM_ASSERT_CHK(1),
 		.USE_EMBEDDED_CONSTRAINT(0),
 		.USE_MEM_INIT(1),
 		.WAKEUP_TIME("disable_sleep"),

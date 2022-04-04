@@ -7,6 +7,9 @@ nav:
   - 实验须知: 实验须知.md
   - labs概要: labs.md
   - lab1: lab1/实验要求.md 
+  - lab2:
+    - 总线: lab2/总线.md
+    - 实验要求: lab2/lab2.md
   - 常见问题: 常见问题.md
   - 参考资料: 参考资料.md
 

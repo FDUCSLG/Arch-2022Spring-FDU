@@ -24,7 +24,7 @@ lab2的测试程序为`all-test-rv64i`。
 
 | test       | 拨码开关\* | 预期指令数 | 预期输出                                                     |
 | ---------- | ---------- | ---------- | ------------------------------------------------------------ |
-| paint      | 001        | ~4.4e6     | 输出Done! Result:，后面的内容是一张图片的base64编码，应该可以直接将其（包含开头的data:）复制到浏览器的地址栏打开。如果你的浏览器不支持直接打开base64编码的图片，请尝试在百度上找一个base64转图片的工具，如[这个][https://tool.chinaz.com/tools/imgtobase]。输出的图片应该是一个你很熟悉的事物，并且没有明显的变形和噪点。图片的左上角有一行数字，表示cpu绘制这张图所画的毫秒数\*\*。 |
+| paint      | 001        | ~4.4e6     | 输出Done! Result:，后面的内容是一张图片的base64编码，应该可以直接将其（包含开头的data:）复制到浏览器的地址栏打开。如果你的浏览器不支持直接打开base64编码的图片，请尝试在百度上找一个base64转图片的工具，如[这个](https://tool.chinaz.com/tools/imgtobase)。输出的图片应该是一个你很熟悉的事物，并且没有明显的变形和噪点。图片的左上角有一行数字，表示cpu绘制这张图所画的毫秒数\*\*。 |
 | coremark   | 010        | ~4.0e6     | 输出Finised in xxxms.表示cpu运行coremark测试程序的时间（Finised是原程序中就有的typo）。在答案正确的情况下，还会输出CoreMark Iterations/Sec，表示cpu在一秒内执行coremark循环的次数，分数越高说明cpu性能越好。作为对比，i7-7700的分数约为2e4 Iter/Sec\*\*\*。 |
 | dhrystone  | 011        | ~4.8e6     | 输出Dhrystone PASS（如果是FAIL，那么说明答案错误，所给得分没有意义），并给出cpu的得分。作为对比，i7-7700k的分数约为1e5\*\*\*。 |
 | stream     | 100        | ~8.5e6     | 输出对cpu访存速度的测试结果，且后面应有avg error less than 1.000000e-13 on all three arrays（表示测试过程中未出现错误）。这个测试没有官方的参考分数，我们只提供i7的copy速度供参考：L1 cache ~ 500GB/s;  L2&3 cache ~ 100GB/s; Memory ~ 25GB/s。stream是线性执行的，基本上可以认为copy速度与L1 cache接近。 |

@@ -15,9 +15,13 @@ git remote set-url origin https://github.com/FDUCSLG/Arch-2022Spring-FDU.git
 
 # 这一步如果卡很久，就 Ctrl-C 后重试
 git fetch --all
+# 或者仅拉取master分支
+git fetch origin master
 
 git merge origin/master
 # Merge 之后可以需要处理 Merge Conflict，在VS Code里可以很方便地处理
+
+
 git submodule update
 ```
 

@@ -1,5 +1,0 @@
-*
-!*/
-!/src/ip/**/*.xci
-!.gitignore
-!*.xpr

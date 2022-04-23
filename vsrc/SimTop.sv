@@ -2,7 +2,7 @@
 `include "include/common.sv"
 `include "pipeline/core.sv"
 
-// `define USE_VTOP
+`define USE_VTOP
 
 module SimTop import common::*;(
   input         clock,

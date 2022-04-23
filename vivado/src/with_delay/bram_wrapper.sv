@@ -1,4 +1,6 @@
-module bram_wrapper (
+module bram_wrapper #(
+	parameter logic SIMULATION = 1'b0
+)(
 	input logic clk, reset,
 
 	input logic valid,
@@ -13,7 +15,7 @@ module bram_wrapper (
 	output logic last
 
 );
-	localparam BRAM_DELAY = 2;
+	localparam BRAM_DELAY = SIMULATION ? 2 : 32;
 	logic [15:0] counter;
 
 	logic real_valid;

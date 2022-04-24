@@ -29,7 +29,7 @@ module device #(
 		if (reset) {cnter, cnter1} <= '0;
 		else begin
 			cnter1 <= cnter1 + 1;
-			if (cnter1 == 100000) begin
+			if (cnter1 == 100) begin
 				cnter1 <= '0;
 				cnter <= cnter + 1;
 			end

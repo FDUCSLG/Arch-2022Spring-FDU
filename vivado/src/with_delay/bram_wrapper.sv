@@ -25,7 +25,7 @@ module bram_wrapper #(
 	end
 	
 	always_ff @(posedge clk) begin
-		if (reset || counter != BRAM_DELAY || ~valid || real_valid || last) real_valid <= '0;
+		if (reset || counter != BRAM_DELAY || ~valid || last) real_valid <= '0;
 		else real_valid <= '1;
 	end
 
@@ -53,9 +53,17 @@ module bram_wrapper #(
 		.douta(rdata)
 	);
 
+	logic ready_read, ready_write;
+	logic last_read, last_write;
+
 	always_ff @(posedge clk) begin
-		ready <= real_valid;
-		last <= is_incr ? real_valid : real_valid && burst_counter == len;
+		ready_read <= ready_write;
+		last_read <= last_write;
 	end
+
+	assign ready_write = real_valid;
+	assign last_write = ~is_incr ? real_valid : real_valid && burst_counter == len;
 	
+	assign ready = |wstrobe ? ready_write : ready_read;
+	assign last = |wstrobe ? last_write : last_read;
 endmodule

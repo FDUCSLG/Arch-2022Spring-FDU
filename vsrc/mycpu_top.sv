@@ -28,7 +28,7 @@ module mycpu_top
 	assign addr = oreq.addr;
 	assign wdata = oreq.data;
 	assign oresp.data = rdata;
-	assign wstrobe = oreq.strobe;
+	assign wstrobe = oreq.strobe & {8{oreq.is_write}};
 	assign burst = oreq.burst;
 	assign len = oreq.len;
 	assign oresp.ready = ready;

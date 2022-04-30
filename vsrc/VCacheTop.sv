@@ -1,7 +1,7 @@
 `include "access.svh"
 `ifdef VERILATOR
 `include "include/common.sv"
-`include "cache/DCache.sv"  //include the cache module
+/* You should not add any additional includes in this file */
 `endif
 
 

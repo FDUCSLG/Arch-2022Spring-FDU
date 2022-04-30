@@ -59,6 +59,9 @@ include verilate/Makefile.vsim.mk
 test-cache:
 	@rm -rf build && make vsim -j4
 
+test-cache-gdb:
+	@rm -rf build && make vsim-gdb -j4
+
 test-refcache:
 	@rm -rf build && make vsim -j4 REFERENCE_CACHE=1
 

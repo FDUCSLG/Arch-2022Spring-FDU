@@ -7,6 +7,9 @@
 `include "util/IBusToCBus.sv"
 `include "util/DBusToCBus.sv"
 `include "util/CBusArbiter.sv"
+
+`include "cache/ICache.sv"
+`include "cache/DCache.sv"
 `endif
 module VTop 
 	import common::*;(
@@ -24,14 +27,14 @@ module VTop
     cbus_resp_t icresp, dcresp;
 
     core core(.*);
-	// if (USE_ICACHE == 0)
+	if (USE_ICACHE == 0)
     	IBusToCBus icvt(.*);
-	// else
-	// 	ICache ICache(.creq(icreq), .cresp(icresp), .*);
-	// if (USE_DCACHE == 0)
+	else
+		ICache ICache(.creq(icreq), .cresp(icresp), .*);
+	if (USE_DCACHE == 0)
     	DBusToCBus dcvt(.*);
-	// else
-	// 	DCache DCache(.creq(dcreq), .cresp(dcresp), .*);
+	else
+		DCache DCache(.creq(dcreq), .cresp(dcresp), .*);
 
     /**
      * TODO (Lab2) replace mux with your own arbiter :)

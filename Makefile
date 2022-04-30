@@ -52,4 +52,14 @@ test-lab2: sim
 test-lab3: sim
 	TEST=$(TEST) ./build/emu --diff ./riscv64-nemu-interpreter-so -i ./ready-to-run/lab3/all-test-rv64im.bin $(VOPT) || true
 
+include verilate/Makefile.include
+include verilate/Makefile.verilate.mk
+include verilate/Makefile.vsim.mk
+
+test-cache:
+	@rm -rf build && make vsim -j4
+
+test-refcache:
+	@rm -rf build && make vsim -j4 REFERENCE_CACHE=1
+
 .PHONY: verilog emu clean sim

@@ -31,6 +31,7 @@ module LUTRAM_DualPort #(
 );
 
 `ifdef VERILATOR
+	/* verilator tracing_on */
 	rview_t mem [NUM_WORDS-1:0];
 	initial begin
 		for (int i = 0; i < NUM_WORDS; i++) begin
@@ -74,7 +75,7 @@ module LUTRAM_DualPort #(
 				if (strobe[i])
 					mem[addr_1].lanes[i] <= wdata.lanes[i];
 	end
-
+	/* verilator tracing_on */
 `else
 	xpm_memory_dpdistram #(
 		.ADDR_WIDTH_A(ADDR_WIDTH),

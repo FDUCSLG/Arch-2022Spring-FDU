@@ -32,6 +32,7 @@ module RAM_SimpleDualPort #(
 );
 
 `ifdef VERILATOR
+	/* verilator tracing_off */
 	rview_t mem [NUM_WORDS-1:0];
 	initial begin
 		for (int i = 0; i < NUM_WORDS; i++) begin
@@ -62,7 +63,7 @@ module RAM_SimpleDualPort #(
 				if (strobe[i])
 					mem[waddr].lanes[i] <= wdata.lanes[i];
 	end
-	
+	/* verilator tracing_on */
 `else
 	xpm_memory_sdpram #(
 		.ADDR_WIDTH_A(ADDR_WIDTH),

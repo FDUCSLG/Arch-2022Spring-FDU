@@ -33,9 +33,9 @@ SV_WARNINGS = \
 	-Wall \
 	-Wno-IMPORTSTAR\
 	-Wno-STMTDLY \
-	-Wno-WIDTH           \
 	-Wno-declfilename\
 	-Wno-UNUSED \
+	-Wno-EOFNEWLINE
 	# add warnings that you wanna ignore.
 
 SV_FLAGS = \

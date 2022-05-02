@@ -35,7 +35,6 @@ SV_WARNINGS = \
 	-Wno-STMTDLY \
 	-Wno-declfilename\
 	-Wno-UNUSED \
-	-Wno-EOFNEWLINE
 	# add warnings that you wanna ignore.
 
 SV_FLAGS = \

@@ -572,7 +572,7 @@ public:
 		bool WaitAddrOk = true,
 		bool EvalFirst = true,
 		bool ClearValid = true>
-	auto await(uint64_t max_count = UINT64_MAX) -> word_t
+	auto await(uint64_t max_count = 128 * 1024 * 1024) -> word_t
 	{
 		enum : uint32_t {
 			ADDR_OK = 1,
@@ -602,6 +602,10 @@ public:
 			remain ^= acked;
 			if (remain == 0)
 				return data;
+
+			if (count % (32 * 1024 * 1024) == 0) {
+				warn(YELLOW "[Warning]" RESET " DBus 0x%llx cycles but no response, please check data_ok in waveform\n", count);
+			}
 		}
 
 		panic("await timeout: no response from DBus in %llu cycle(s)", max_count);

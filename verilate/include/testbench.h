@@ -190,7 +190,7 @@ public:
 		asserts(
 			got == expected,
 			"different outputs from RTL model and reference model."
-			" expected = %08x, got = %08x",
+			" expected = %016x, got = %016x",
 			expected, got
 		);
 		ref->check_internal();

@@ -8,8 +8,12 @@ nav:
   - labs概要: labs.md
   - lab1: lab1/实验要求.md 
   - lab2:
-    - 总线: lab2/总线.md
+    - 总线(上): lab2/总线.md
     - 实验要求: lab2/lab2.md
+  - lab3:
+    - 总线(下): lab3/总线.md
+    - 缓存: lab3/cache.md
+    - 实验要求: lab3/lab3.md
   - 常见问题: 常见问题.md
   - 参考资料: 参考资料.md
 

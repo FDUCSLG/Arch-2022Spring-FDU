@@ -1,0 +1,783 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.6">
+    
+    
+      
+        <title>实验环境 - Arch-2022Spring-FDU</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9d5733d3.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Arch-2022Spring-FDU" class="md-header__button md-logo" aria-label="Arch-2022Spring-FDU" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Arch-2022Spring-FDU
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              实验环境
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Arch-2022Spring-FDU" class="md-nav__button md-logo" aria-label="Arch-2022Spring-FDU" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Arch-2022Spring-FDU
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        课程大纲
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          实验环境
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        实验环境
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    实验环境搭建
+  </a>
+  
+    <nav class="md-nav" aria-label="实验环境搭建">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-linux" class="md-nav__link">
+    1 Linux 环境安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verilator" class="md-nav__link">
+    2 仿真器 Verilator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-gtkwave" class="md-nav__link">
+    3 波形图软件 GTKWave
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-vivado" class="md-nav__link">
+    4 Vivado
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    实验环境介绍
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AE%9E%E9%AA%8C%E6%B5%8B%E8%AF%95/" class="md-nav__link">
+        实验测试
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AE%9E%E9%AA%8C%E9%A1%BB%E7%9F%A5/" class="md-nav__link">
+        实验须知
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../labs/" class="md-nav__link">
+        labs概要
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab1/%E5%AE%9E%E9%AA%8C%E8%A6%81%E6%B1%82/" class="md-nav__link">
+        lab1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          lab2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="lab2" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          lab2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/%E6%80%BB%E7%BA%BF/" class="md-nav__link">
+        总线(上)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/lab2/" class="md-nav__link">
+        实验要求
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          lab3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="lab3" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          lab3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/%E6%80%BB%E7%BA%BF/" class="md-nav__link">
+        总线(下)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/cache/" class="md-nav__link">
+        缓存
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/lab3/" class="md-nav__link">
+        实验要求
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        常见问题
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/" class="md-nav__link">
+        参考资料
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    实验环境搭建
+  </a>
+  
+    <nav class="md-nav" aria-label="实验环境搭建">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-linux" class="md-nav__link">
+    1 Linux 环境安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verilator" class="md-nav__link">
+    2 仿真器 Verilator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-gtkwave" class="md-nav__link">
+    3 波形图软件 GTKWave
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-vivado" class="md-nav__link">
+    4 Vivado
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    实验环境介绍
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>实验环境</h1>
+
+<h2 id="_1">实验环境搭建<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>本学期的课程，我们需要在自己的电脑上安装：</p>
+<ul>
+<li>Linux 环境（Ubuntu 20.04）</li>
+<li>Verilator</li>
+<li>GTKWave</li>
+<li>Vivado 2018.3</li>
+</ul>
+<h3 id="1-linux">1 Linux 环境安装<a class="headerlink" href="#1-linux" title="Permanent link">&para;</a></h3>
+<p>有三种方案：</p>
+<ul>
+<li>Windows+WSL</li>
+<li>Linux 虚拟机（VMware）</li>
+<li>Linux 原生系统</li>
+</ul>
+<p>如果你没安装过后两种，那么我推荐第一种方案，以下给出安装步骤：</p>
+<ul>
+<li>在 Windows 系统上打开 Microsoft Store</li>
+<li>搜索 Ubuntu 20.04 并安装</li>
+<li>安装 <a href="https://code.visualstudio.com/">Visual Studio Code</a>（推荐的代码编辑器）</li>
+<li>将 WSL 设置为默认 Terminal</li>
+<li>配置 apt 源（修改 <code>/etc/apt/sources.list</code> ，推荐<a href="https://mirrors.ustc.edu.cn/help/ubuntu.html">中科大源</a>）</li>
+<li>安装一些基本的软件包<code>sudo apt install git perl python3 make autoconf g++ flex bison ccache</code></li>
+</ul>
+<h3 id="2-verilator">2 仿真器 Verilator<a class="headerlink" href="#2-verilator" title="Permanent link">&para;</a></h3>
+<p>我们将使用 verilator 进行电路仿真。需要 verilator &gt;= 4.210 版本。Verilator 没有 Windows 版本的，需要在 Linux 环境中运行。</p>
+<p>无论你使用什么版本的 Linux，我们都推荐从源码进行编译。</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~ <span class="c1">#如果使用 WSL，这个目录在 C 盘的某个位置</span>
+git clone git://github.com/verilator/verilator
+<span class="nb">cd</span> verilator
+git checkout v4.210
+autoconf <span class="c1">#如果显示 not found，那么sudo apt install autoconf后再执行 autoconf</span>
+./configure
+make -j12  <span class="c1">#如果这一步出现问题，改成make -j4或者直接make</span>
+sudo apt remove verilator <span class="c1">#卸载已有的版本</span>
+sudo make uninstall
+sudo make install
+verilator --version  <span class="c1">#查看verilator的版本</span>
+</code></pre></div>
+<p>如果报某个头文件 not found，请参考 <a href="https://verilator.org/guide/latest/install.html#git-quick-install">https://verilator.org/guide/latest/install.html#git-quick-install</a></p>
+<h3 id="3-gtkwave">3 波形图软件 GTKWave<a class="headerlink" href="#3-gtkwave" title="Permanent link">&para;</a></h3>
+<p>我们将使用 GTKWave 软件查看仿真波形图。</p>
+<p>如果你使用 Linux 虚拟机或 Linux 原生系统，只需：</p>
+<ul>
+<li><code>sudo apt install gtkwave</code></li>
+<li>运行 GTKwave： <code>gtkwave trace.fst</code></li>
+</ul>
+<p>如果你使用的是 Windows + WSL，则需要安装 GTKwave 的 Windows 版本，在 elearning 上可以下载免安装版本。使用时，双击 fst 波形图文件，设置 <code>gtkwave/bin/gtkwave.exe</code> 为默认打开程序即可。</p>
+<h3 id="4-vivado">4 Vivado<a class="headerlink" href="#4-vivado" title="Permanent link">&para;</a></h3>
+<p>我们要求使用 Vivado 2018.3，指定这个版本，如果是其他版本的 Vivado 可能有不兼容。</p>
+<p>可以根据 <a href="https://github.com/Tan-YiFan/DigitalLogic-Autumn2020">https://github.com/Tan-YiFan/DigitalLogic-Autumn2020</a> 里的 <code>notes/01开发流程（上）</code> 进行安装，也可以直接从 <a href="../%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/">参考资料</a> 中下载源文件。</p>
+<p>由于该软件体积过大，你也可以用机房电脑上 Win10-2 分区上的 Vivado。  </p>
+<h2 id="_2">实验环境介绍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>verilator：我们采用 verilator 对CPU进行模拟（ verilator 要求运行在linux环境下，此外还需要安装一些库文件，具体可见 实验环境搭建），然后用 difftest 进行指令级别层面的对比，直接在仓库目录下执行 <code>make test-lab*</code> 即可。虽然verilator的仿真速度一般而言更快，但是功能还不完善，因此对我们编写代码有一定的限制（具体见 实验测试方法 中的代码编写部分）可以参考<a href="https://fducslg.github.io/ICS-2021Spring-FDU/misc/verilate.html">去年实验的介绍</a></p>
+</li>
+<li>
+<p>vivado：打开 vivado ，运行<code>vivado\test1\project\project_1.xpr</code>，点击 <code>tools</code> 选项下的<code>run tcl script</code>，运行 <code>vsrc\add_sources.tcl</code> 添加源文件后，就可以开始仿真、综合、生成bit文件上板了。</p>
+</li>
+<li>
+<p>Makefile：makefile可以简单理解为工程文件的编译规则，描述了整个工程的编译和链接等规则，内部具体的实现不需要了解，只需要知道通过 <code>make test-lab*</code>可以对对应的lab进行仿真测试即可</p>
+</li>
+<li>
+<p>git：我们采用 git 工具 对所有的 lab 进行管理并发布</p>
+</li>
+</ul>
+<p>请先用 clone 命令下载我们的仓库的master，然后再下载difftest子仓库：</p>
+<div class="highlight"><pre><span></span><code>git clone -b master https://github.com/FDUCSLG/Arch-2022Spring-FDU.git <span class="c1">#我们的实验只需关注master这个分支</span>
+<span class="nb">cd</span> Arch-2022Spring-FDU
+git submodule update --init --recursive
+</code></pre></div>
+<p>其中的第一条命令的 <code>-b master</code> 指的是下载 master 这个分支，我们的实验只需要关注 master 分支，所以其它的分支可以不下载。</p>
+<p>此外我们会不定时地更新代码仓库以解决bug（因此必须用clone把仓库配置相关文件也下载下来，这样才方便进行后续更新），每次更新的时候助教都会在群里或者上课的时候进行提醒，当然更好的是养成每次写代码前及时更新的习惯 <img alt="😏" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f60f.svg" title=":smirk:" /> 。以下是更新的步骤：</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 先在vsrc目录下提交保存你写的代码</span>
+<span class="nb">cd</span> vsrc
+git add .
+git commit -m <span class="s2">&quot;本此提交的信息，比如：commit for pull&quot;</span>
+
+<span class="c1"># 然后运行以下命令拉取并合并远端仓库的代码</span>
+git pull origin master <span class="c1"># 我们的实验只需关注master分支</span>
+<span class="c1"># 可能会有冲突，因人而异，需要自行解决</span>
+git submodule update <span class="c1">#更新子仓库</span>
+</code></pre></div>
+<p>git 的功能十分强大，这里所用的不及九牛一毛，如果你感兴趣的话可以自行搜索。</p>
+<ul>
+<li>GTKWave：开源的波形图浏览器，在<code>make</code>命令后加上 <code>VOPT="--dump-wave"</code>即可在 build 目录下看到 fst 格式的波形图，可以参考<a href="https://fducslg.github.io/ICS-2021Spring-FDU/misc/gtkwave.html">去年实验的介绍</a>。</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: 课程大纲" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              课程大纲
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../%E5%AE%9E%E9%AA%8C%E6%B5%8B%E8%AF%95/" class="md-footer__link md-footer__link--next" aria-label="Next: 实验测试" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              实验测试
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.5e67fbfe.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e87a5f81.min.js"></script>
+      
+    
+  </body>
+</html>

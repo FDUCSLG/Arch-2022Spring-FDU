@@ -52,6 +52,10 @@ test-lab2: sim
 test-lab3: sim
 	TEST=$(TEST) ./build/emu --diff ./riscv64-nemu-interpreter-so -i ./ready-to-run/lab3/all-test-rv64im.bin $(VOPT) || true
 
+microbench:
+	make sim BENCHMARK=1
+	./build/emu --diff ./riscv64-nemu-interpreter-so -i ./ready-to-run/challenge/microbench-riscv64-nutshell.bin $(VOPT) || true
+
 include verilate/Makefile.include
 include verilate/Makefile.verilate.mk
 include verilate/Makefile.vsim.mk

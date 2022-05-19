@@ -65,10 +65,35 @@ module RAM_SinglePort #(
 	end
 	/* verilator tracing_on */
 `else
+
+	localparam logic NEED_EXPAND = BYTE_WIDTH != WORD_WIDTH && BYTE_WIDTH != 8;
+	localparam REAL_BYTE_WIDTH = NEED_EXPAND ? 8 : BYTE_WIDTH;
+	localparam REAL_STROBE_BITS = NEED_EXPAND ? WORD_WIDTH/8 : BYTES_PER_WORD;
+	localparam type real_strobe_t = logic [REAL_STROBE_BITS/8-1:0];
+	real_strobe_t real_strobe;
+	if (BYTE_WIDTH != WORD_WIDTH && BYTE_WIDTH != 8) begin
+		initial begin : validation
+			if (BYTE_WIDTH & 3'b111 != '0) begin
+				$error("BYTE_WIDTH should be 1 byte align for byte write.");
+			end
+			if (WORD_WIDTH % BYTE_WIDTH != '0) begin
+				$error("WORD_WIDTH % BYTE_WIDTH should be 0.");
+			end
+			if (WORD_WIDTH < 8) begin
+				$error("WORD_WIDTH < 8.");
+			end
+		end : validation
+		localparam EXPAND = BYTE_WIDTH / 8;
+		for (genvar i = 0; i < WORD_WIDTH/8; i++)
+			assign real_strobe[i] = strobe[i / EXPAND];
+	end else begin;
+		assign real_strobe = strobe;
+	end
+
 	xpm_memory_spram #(
 		.ADDR_WIDTH_A(ADDR_WIDTH),
 		.AUTO_SLEEP_TIME(0),
-		.BYTE_WRITE_WIDTH_A(BYTE_WIDTH),
+		.BYTE_WRITE_WIDTH_A(REAL_BYTE_WIDTH),
 		// .CASCADE_HEIGHT(0),
 		.ECC_MODE("no_ecc"),
 		.MEMORY_INIT_FILE("none"),
@@ -89,7 +114,7 @@ module RAM_SinglePort #(
 	) xpm_memory_spram_inst (
 		.clka(clk), .ena(en),
 		.addra(addr),
-		.wea(strobe),
+		.wea(real_strobe),
 		.dina(wdata),
 		.douta(rdata),
 

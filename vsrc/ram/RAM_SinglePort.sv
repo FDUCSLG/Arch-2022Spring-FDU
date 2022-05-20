@@ -73,10 +73,10 @@ module RAM_SinglePort #(
 	real_strobe_t real_strobe;
 	if (BYTE_WIDTH != WORD_WIDTH && BYTE_WIDTH != 8) begin
 		initial begin : validation
-			if (BYTE_WIDTH & 3'b111 != '0) begin
-				$error("BYTE_WIDTH should be 1 byte align for byte write.");
+			if ((BYTE_WIDTH % 8) != '0) begin
+				$error("BYTE_WIDTH should be 8 bit align for byte write.");
 			end
-			if (WORD_WIDTH % BYTE_WIDTH != '0) begin
+			if ((WORD_WIDTH % BYTE_WIDTH) != '0) begin
 				$error("WORD_WIDTH % BYTE_WIDTH should be 0.");
 			end
 			if (WORD_WIDTH < 8) begin

@@ -21,11 +21,12 @@ module SimTop import common::*;(
 `ifdef USE_VTOP
 cbus_req_t  oreq;
 cbus_resp_t oresp;
+logic trint, swint, exint;
 VTop top(
-  .clk(clock), .reset, .oreq, .oresp
+  .clk(clock), .reset, .oreq, .oresp, .trint, .swint, .exint
 );
 RAMHelper2 ram(
-  .clk(clock), .reset, .oreq, .oresp
+  .clk(clock), .reset, .oreq, .oresp, .trint, .swint, .exint
 );
 `else
 ibus_req_t ireq;

@@ -16,7 +16,9 @@ module VTop
 	input logic clk, reset,
 
 	output cbus_req_t  oreq,
-	input  cbus_resp_t oresp
+	input  cbus_resp_t oresp,
+
+	input logic trint, swint, exint
 );
 
     ibus_req_t  ireq;

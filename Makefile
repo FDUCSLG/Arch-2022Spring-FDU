@@ -56,6 +56,12 @@ microbench:
 	make sim BENCHMARK=1
 	./build/emu --diff ./riscv64-nemu-interpreter-so -i ./ready-to-run/challenge/microbench-riscv64-nutshell.bin $(VOPT) || true
 
+test-lab4: sim
+	TEST=$(TEST) ./build/emu --diff ./riscv64-nemu-interpreter-so -i ./ready-to-run/lab4/all-test-priv.bin $(VOPT) || true
+
+test-lab4full: sim
+	TEST=$(TEST) ./build/emu --diff ./riscv64-nemu-interpreter-so -i ./ready-to-run/lab4/all-test-privfull.bin $(VOPT) || true
+
 include verilate/Makefile.include
 include verilate/Makefile.verilate.mk
 include verilate/Makefile.vsim.mk

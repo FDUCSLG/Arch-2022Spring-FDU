@@ -5391,7 +5391,7 @@ Disassembly of section .text.user:
     80006018:	070000ef          	jal	ra,80006088 <setup_test>
     8000601c:	00000597          	auipc	a1,0x0
     80006020:	01058593          	addi	a1,a1,16 # 8000602c <illegal_instr>
-    80006024:	00158293          	addi	t0,a1,1
+    80006024:	00258293          	addi	t0,a1,2
     80006028:	00028367          	jalr	t1,t0
 
 000000008000602c <illegal_instr>:
